@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-    int stack[5],top=-1,choice,value;
+    int stack[100],top=-1,choice,value;
     printf("Stack menu\n1.Push\n2.Pop\n3.Peek\n4.Display\n5.exit\n");
     do
     {
@@ -10,7 +10,7 @@ void main()
         switch (choice)
         {
             case 1:
-                if(top==5-1)
+                if(top==100-1)
                     printf("Stack overflow!\n");
                 else
                 {
