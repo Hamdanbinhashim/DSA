@@ -1,7 +1,7 @@
 #include<stdio.h>
 void main()
 {
-    int stack[100],top=-1,choice,value;
+    int stack[5],top=-1,choice,value;
     printf("Stack menu\n1.Push\n2.Pop\n3.Peek\n4.Display\n5.exit\n");
     do
     {
@@ -10,7 +10,7 @@ void main()
         switch (choice)
         {
             case 1:
-                if(top==100-1)
+                if(top==5-1)
                     printf("Stack overflow!\n");
                 else
                 {
@@ -40,15 +40,16 @@ void main()
                 else
                 {
                     printf("Stack elements:\n");
-                    for (i=top; i<0; i--)
-                        printf("Top:%d\n",stack[i]);
+                    for (int i=top; i>=0; i--)
+                        printf("%d ",stack[i]);
                 }
+                printf("\n");
                 break;
             case 5:
-                printf("Exiting...");
+                printf("Exiting...\n");
                 break;
             default:
-                printf("Invalid input!");
+                printf("Invalid input!\n");
                 break;
         }
     } while(choice!=5);
