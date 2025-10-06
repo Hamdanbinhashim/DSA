@@ -9,8 +9,8 @@ void main()
     scanf("%d", &m);
     printf("Enter the number of columns: ");
     scanf("%d", &n);
-    matrix[m][n];
-    sparseMatrix[m+n][3];
+    int matrix[m][n];
+    int sparseMatrix[m+n][3];
     printf("Enter the elements of the matrix:\n");
     for (i = 0; i < m; i++)
     {
