@@ -34,15 +34,14 @@ void display() {
     printf("\n");
 }
 
-int main() {
-    int choice, value;
-
-    while (1) {
-        printf("\n--- Queue Menu ---\n");
-        printf("1. Enqueue\n");
-        printf("2. Dequeue\n");
-        printf("3. Display\n");
-        printf("4. Exit\n");
+void main() {
+     int choice, value;
+     printf("\n--- Queue Menu ---\n");
+     printf("1. Enqueue\n");
+     printf("2. Dequeue\n");
+     printf("3. Display\n");
+     printf("4. Exit\n");
+     do {
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
@@ -60,11 +59,10 @@ int main() {
             break;
         case 4:
             printf("Exiting program.\n");
-            return 0;
+            break;
         default:
             printf("Invalid choice. Please try again.\n");
         }
-    }
+    }while(choice!=4);
 
-    return 0;
 }
