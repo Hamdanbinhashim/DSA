@@ -1,13 +1,13 @@
 #include <stdio.h>
 
-void quickSort(int a[], int s, int n)
+void quickSort(int a[], int start, int end)
 {
-    if (s >= n)
+    if (start >= end)
         return;
 
-    int pivot = a[n];
-    int i = s - 1;
-    for (int j = s; j < n; j++)
+    int pivot = a[end];
+    int i = start - 1;
+    for (int j = start; j < end; j++)
     {
         if (a[j] < pivot)
         {
@@ -19,11 +19,11 @@ void quickSort(int a[], int s, int n)
     }
     i++;
     int temp = a[i];
-    a[i] = a[n];
-    a[n] = temp;
+    a[i] = a[end];
+    a[end] = temp;
 
-    quickSort(a, s, i - 1);
-    quickSort(a, i + 1, n);
+    quickSort(a, start, i - 1);
+    quickSort(a, i + 1, end);
 }
 
 
