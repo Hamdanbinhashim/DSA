@@ -5,7 +5,7 @@ int queue[SIZE];
 int front = -1, rear = -1;
 
 void enqueue(int value) {
-    if ((front == 0 && rear == SIZE - 1) || (rear + 1) % SIZE == front) {
+    if ((rear + 1) % SIZE == front) {
         printf("Queue is full!\n");
         return;
     }
@@ -42,13 +42,11 @@ void display() {
     }
 
     printf("Queue elements: ");
-    int i = front;
-    while (1) {
+    int i;
+    for (i = front;i!=rear;i=(i + 1) % SIZE) {
         printf("%d ", queue[i]);
-        if (i == rear)
-            break;
-        i = (i + 1) % SIZE;
     }
+    printf("%d ", queue[i]);
     printf("\n");
 }
 
